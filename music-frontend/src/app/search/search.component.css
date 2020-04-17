@@ -1,0 +1,42 @@
+.search-sec{
+    padding: 2rem;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background-color: black !important ; 
+    border: 1px solid orange;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+    color: orange !important;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+    border:1px solid orange;
+    background-color: black !important;
+    color: orange;
+}
+@media (min-width: 992px){
+    .search-sec{
+        position: relative;
+        top: -15px;
+        background: rgba(26, 70, 104, 0.51);
+    }
+}
+@media (max-width: 992px){
+    .search-sec{
+        background:rgba(26, 70, 104, 0.51);
+    }
+}
+@media only screen and (min-width:1200px){
+.search-inner{
+    padding-left: 200px;
+}
+}

@@ -1,0 +1,18 @@
+<!-- <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px" *ngFor="let artist of recom"  >
+  
+    <mat-card  class="example-card" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
+      <mat-card-content>  
+        <mat-card-content >{{artist["name"]}}</mat-card-content>                  
+      </mat-card-content>
+      <mat-card-content>
+      <img class="image img-fluid" mat-card-image src="{{artist.album.images[1]['url']}}" alt="loading image">
+                  
+      </mat-card-content>
+    </mat-card>
+    </div>
+     -->
+
+
+     <div class="country_list">
+     <app-unfavrec [parentList]= "recommend" [parentSub] = "recomSubject" [artist]="artist" *ngFor="let artist of recommend"></app-unfavrec>
+     </div>

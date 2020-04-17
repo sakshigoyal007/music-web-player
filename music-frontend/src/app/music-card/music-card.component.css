@@ -1,0 +1,67 @@
+.example-card {
+  /*
+  width: 20%; 
+  height: 100%; */
+  max-width:100%;
+      max-height: 60vh;
+      margin: 1em;
+      padding:0.5em;
+      border:2px solid orange;
+      background-color: rgb(56, 55, 55) !important;
+      color: white;
+      overflow-x: none;
+  object-fit: cover;
+  /* display: flex; */
+  /* flex-direction: column; */
+  }
+  .image{
+    
+    /* max-height: 30vh;
+    height: auto !important;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100% !important;
+    margin: 0.2em;
+    width: 100% !important; */
+    max-width:100%;
+    max-height: 30vh;
+      
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0.2em;
+    
+    /* background-image: url("../../assets/img/nullimg.jpg"); */
+    }
+    .play_button{
+      display:flex;
+      margin-left: 35%;
+      /* align-content: center; */
+      /* justify-content: center; */
+      /* align-items: center; */
+      }
+     
+      .btn_sec{
+      flex-wrap: wrap;
+      /* margin: 0.2em;
+      padding: 0.5em; */
+      text-align: center;
+      }
+      .btn_one{
+        align-items: center;
+        /* padding-left: 110px; */
+      padding-left: 7vw;
+         width:10vw;
+      }
+      .favplay{
+      justify-content: space-between;
+      text-align: center !important;
+      }
+      .title{
+        font-weight: bold;        
+      }
+     
+      @media only screen and (min-width:400px) and (max-width:800px){
+        #btn_one_id{
+          padding-left: 3vw;
+        }
+      }

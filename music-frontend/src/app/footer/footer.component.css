@@ -1,0 +1,58 @@
+.footer-section {
+    background-color:black;
+    border-top:1px solid orange ;
+    overflow-x: hidden;
+    /* margin-top: 30vh; */
+}
+
+.space{
+    margin: 20px;
+        
+}
+
+.info{
+    color: white;
+}
+
+
+@media only screen and (max-width: 1200px){
+.contact{
+    padding-left: 200px;
+}
+}
+
+.contact{
+    padding-left: 30px;
+}
+
+@media only screen and (min-width: 1200px){
+.connect{
+    padding-left: 200px;
+    padding-top: 20px;;
+}
+}
+
+.connect{
+    padding-left: 30px;
+}
+
+@media only screen and (min-width: 1200px){
+.pg{
+    padding-left: 100px;
+    padding-top: 20px;
+}
+}
+
+@media only screen and (max-width: 1200px){
+    .img{
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+}
+
+
+.img{
+    max-width: 100px;
+    max-height: 100px
+}
+

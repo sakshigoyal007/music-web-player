@@ -1,0 +1,48 @@
+<div class="registration-container">
+
+    <form [formGroup]="userDetails" class="form-container">
+    <span class="text-container">
+    <h2>User Registration</h2>
+    </span>
+    <mat-form-field>
+    <input matInput formControlName="fname" [(ngModel)]="register.fname" placeholder="First Name" type="text" name="firstName"
+    id="firstName">
+    </mat-form-field>
+    <mat-form-field>
+    <input matInput formControlName="lname"[(ngModel)]="register.lname" placeholder="LastName" type="text" name="lastName" id="lastName">
+    </mat-form-field>
+    <mat-form-field>
+    <input matInput formControlName="address" placeholder="Address" type="text" name="address" id="address">
+    </mat-form-field>
+    <mat-form-field>
+    <input matInput formControlName="email" [(ngModel)]="register.email" placeholder="Email" type="email" name="email" id="email">
+    </mat-form-field>
+    <mat-form-field>
+    <input matInput formControlName="password" placeholder="Password" [(ngModel)]="register.password" type="password" name="password"
+    id="password">
+    </mat-form-field>
+    <section class="radio-section-container">
+    <span>Gender:</span>
+    <mat-radio-group formControlName="gender" [(ngModel)]="register.gender" name="gender" aria-label="Select an option">
+    <mat-radio-button value="Male">Male</mat-radio-button>
+    <mat-radio-button value="Female">Female</mat-radio-button>
+    <mat-radio-button value="Other">Other</mat-radio-button>
+    </mat-radio-group>
+    </section>
+    
+    <mat-form-field>
+    <input [min]="minDate" [max]="maxDate" formControlName="dob" matInput [matDatepicker]="picker"
+    placeholder="Date of Birth" name="dob" [(ngModel)]="register.dob">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    <div class="button-container">
+    <button type="submit" mat-raised-button color="primary" (click)="doRegister()">Register</button>
+    </div>
+    <div align="center"   class="link">
+        <a href="/login">Already have an account?</a>
+    </div>
+    </form>
+</div>
+    

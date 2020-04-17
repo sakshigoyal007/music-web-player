@@ -1,0 +1,40 @@
+
+  <!-- <p *ngIf="searchResult.length==0">no result found</p>
+
+  <div class="country_list">
+    <mat-card  class="example-card " *ngFor="let artist of searchResult">
+      <mat-card-header>          
+        <mat-card-title>{{artist.name}}</mat-card-title>       
+      </mat-card-header>
+      <img class="image img-fluid" mat-card-image src="{{artist.images[1].url}}" alt="loading image">       
+      <mat-card-content>
+        <div class="favplay" appRowdir>
+          <div class="favourite">            
+            <button mat-fab aria-label="Example icon-button with a heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+        </div>    
+        <div appRowdir class="btn_sec">
+            <div  class="btn_one">
+              <button mat-raised-button (click)="changeText()" color="primary" >{{text}}</button>            
+            </div>                 
+          </div>                        
+          <div class="play_button">                         
+            <a mat-fab href="{{artist.preview_url}}" >Play</a>                         
+          </div>    
+        </div>                  
+      </mat-card-content>
+      <mat-card-actions>              
+      </mat-card-actions>
+    </mat-card>       
+    </div> -->
+  <app-search ></app-search>
+  <div class="search-result">
+  <app-music-card [artist]="artist" *ngFor="let artist of searchResult"></app-music-card>
+  </div>
+
+
+
+
+  
+  

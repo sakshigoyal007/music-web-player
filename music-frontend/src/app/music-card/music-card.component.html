@@ -1,0 +1,28 @@
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px"> 
+  <mat-card  class="example-card" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
+    <mat-card-content>  
+      <mat-card-content >{{artist["name"]}}</mat-card-content>                  
+    </mat-card-content>
+    <mat-card-content>
+    <img class="image img-fluid" mat-card-image src="{{url}}" alt="loading image">
+      <div class="favplay" appRowdir>
+       
+        <!-- <div appRowdir class="btn_sec">
+          <div  class="btn_one">
+            <button mat-raised-button (click)="doRecommend()" color="primary" >Recommend</button>           
+          </div>                
+        </div>                    -->
+        <div class="play_button">          
+          <!-- <a mat-fab href="{{artist.preview_url}}" >Play</a>             -->
+          <button mat-raised-button  color="primary" [routerLink]="['albumDetails']" (click)="GoToDetails()">See More</button>
+         
+        </div>   
+          
+      </div>   
+      <!-- <div class="music_player">
+        <mat-basic-audio-player [audioUrl]="msbapAudioUrl" [title]="msbapTitle" [autoPlay]="false" muted="muted" [displayTitle]="msbapDisplayTitle" [displayVolumeControls]="msbapDisplayVolumeControls" ></mat-basic-audio-player>
+      </div>          -->
+    </mat-card-content>
+  </mat-card>
+</div>

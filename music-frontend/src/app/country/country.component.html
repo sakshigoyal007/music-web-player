@@ -1,0 +1,72 @@
+<app-search ></app-search>
+<div class="country_list">
+  <app-music-card [artist]="artst" *ngFor="let artst of musics.albums.items | paginate: config"></app-music-card>
+</div>
+  <div class="pagination-css" id="pagination-id">
+    <pagination-controls
+    responsive="true"
+    class="pagination"
+    (pageChange)="this.config.currentPage = $event"
+  ></pagination-controls>
+  </div>
+ 
+ 
+  <!-- <div class="pagination-css">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+ </div> -->
+ <!-- | paginate: {itemsPerPage: 4, currentPage: p} -->
+ 
+<!-- 
+  <mat-card  class="example-card " *ngFor="let artist of musics.albums.items">
+    <mat-card-header>
+  
+  
+      <mat-card-title>{{artist["name"]}}</mat-card-title>
+  
+  
+    </mat-card-header>
+    <img class="image img-fluid" mat-card-image src="{{artist.images[1]['url']}}" alt="loading image">
+  
+    <mat-card-content>
+      <div class="favplay" appRowdir>
+        <div class="favourite">
+          <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon> 
+          <button mat-fab aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
+
+        <div appRowdir class="btn_sec">
+          <div  class="btn_one">
+            <button mat-raised-button (click)="changeText()" color="primary" >{{text}}</button>
+          
+  
+          </div>
+          
+    
+    
+        </div>
+    
+         
+      
+        <div class="play_button">
+          
+          <a mat-fab href="{{artist.url}}" >Play</a>
+          
+  
+        </div>
+
+      </div>
+      
+      
+  
+    </mat-card-content>
+    <mat-card-actions>
+      
+      
+    </mat-card-actions>
+  </mat-card>
+  -->
+
+
+

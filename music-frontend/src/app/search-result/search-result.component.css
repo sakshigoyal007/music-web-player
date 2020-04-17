@@ -1,0 +1,54 @@
+.country_list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5em;
+  min-height:100%;
+}
+.example-card {
+    max-width: 500px;
+    margin: 1em;
+    padding:0.5em;
+    border:2px solid orange;
+    background-color: rgb(56, 55, 55) !important;
+    color: white;
+  
+  }
+  
+  .example-header-image {
+    
+    background-size: cover;
+  }
+  .image{
+    height:20vh;
+    width:20vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0.2em;
+    
+  }
+  .play_button{
+    display:flex;
+    justify-content: flex-end;
+  }
+  .btn_sec{
+    flex-wrap: wrap;
+    /* margin: 0.2em;
+    padding: 0.5em; */
+    text-align: center;
+
+  }
+  .btn_one{
+    margin: 0.3em;
+    width:10vw;
+  
+  }
+  .favplay{
+    justify-content: space-between;
+  }
+
+  .search-result{    
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0.5em;   
+      min-height: 55%;         
+    }

@@ -1,0 +1,17 @@
+<app-search ></app-search> 
+<app-carousal></app-carousal>
+<div class="country_list" id="country_id">
+  <app-mcardtop [artist]="artist" *ngFor="let artist of musics.tracks.items | paginate:config "></app-mcardtop>
+</div>
+<div class="pagination-css " id="pagination-id">
+  <pagination-controls
+  responsive="true"
+  class="pagination"
+  (pageChange)="this.config.currentPage = $event"
+></pagination-controls>
+</div>
+
+
+  <!-- <div class="search-result">
+    <app-music-card [artist]="artist" *ngFor="let artist of musics"></app-music-card>
+  </div> -->

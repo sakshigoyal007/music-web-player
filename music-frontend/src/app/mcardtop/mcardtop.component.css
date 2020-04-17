@@ -1,0 +1,56 @@
+.example-card {
+      max-width:100%;
+      max-height: 50vh;
+      margin: 1em;
+      padding:0.5em;
+      border:2px solid orange;
+      background-color: rgb(56, 55, 55) !important;
+      color: white;
+      }
+    .image{
+        max-width:100%;
+      max-height: 30vh;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0.2em;
+        }
+    .play_button{
+          display:flex;
+          justify-content: flex-end;
+          }
+    .btn_sec{
+          flex-wrap: wrap;
+          /* margin: 0.2em;
+          padding: 0.5em; */
+          text-align: center;
+          }
+    .btn_one{
+            align-items: center;
+        
+             width:10vw;
+          }
+    .favplay{
+          justify-content: space-between;
+          }
+    .title{
+            font-weight: bold;
+          }
+
+      .music_player{
+            margin-top: 0.5em;
+            background-color: rgba(221, 201, 164, 0.788);
+      }
+
+ @media screen and (min-width: 350px) and (max-width: 800px) {
+      
+      #btn_one_id{
+          align-items: center;
+          /* text-align: center; */
+          width: 5vw;
+          margin-right: 5em;  
+          /* padding-right: 2em; */
+      }
+ }
+
+          

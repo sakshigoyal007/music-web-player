@@ -1,0 +1,25 @@
+<div class="registration-container">
+
+    <form [formGroup]="userDetails" class="form-container">
+    <span class="text-container">
+    <h2>User Login</h2>
+    </span>
+    
+    <mat-form-field>
+    <input matInput formControlName="email" [(ngModel)]="register.email" placeholder="Email" type="email" name="email" id="email">
+    <small *ngIf="email.invalid && (email.dirty || email.touched)">
+</mat-form-field>
+    <mat-form-field>
+    <input matInput formControlName="password" placeholder="Password" [(ngModel)]="register.password" type="password" name="password"
+    id="password">
+    </mat-form-field>
+  
+    <div class="button-container">
+    <button type="submit" mat-raised-button color="primary" (click)="doLogin()">Login</button>
+    </div>
+    <div align="center"   class="link">
+        <a href="/register">Don't have an account?</a>
+   </div>
+    </form>
+    </div>
+    

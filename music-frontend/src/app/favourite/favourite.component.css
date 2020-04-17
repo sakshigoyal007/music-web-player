@@ -1,0 +1,60 @@
+.country_list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5em;
+  padding:15px;
+  min-height: 70%;
+
+}
+example-card {
+    max-width: 500px;
+    margin-left: 2.5em;
+    padding:0.5em;
+  
+  
+  }
+  
+  .example-header-image {
+    
+    background-size: cover;
+  }
+  #image{
+    height:20vh;
+    width:20vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0.2em;
+    
+  }
+  .play_button{
+    display:flex;
+    justify-content: flex-end;
+  }
+  .btn_sec{
+    flex-wrap: wrap;
+    margin: 0.2em;
+    padding: 0.5em;
+    text-align: center;
+
+  }
+  .btn_one{
+    margin: 2.5em;
+    width:10vw;
+  
+  }
+
+
+
+.toptracks{
+display: flex;
+flex-wrap: wrap;
+margin: 0.5em;  
+}
+.pagination-css{
+background-color: rgba(209, 139, 9, 0.863) !important;
+margin-left: 40vw;
+padding-right: 5px;
+padding-left: 0px;
+border-radius: 1.5em;
+position: relative;
+}

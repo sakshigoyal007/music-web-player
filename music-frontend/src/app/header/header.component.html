@@ -1,0 +1,68 @@
+<nav class="navbar navbar-inverse navbar-expand-lg  mb-3 ">
+  <fa-icon [icon]="filmIcon" class="d-flex ic iconrot" size="2x" [spin]="true" [routerLink]="['toptracks']"></fa-icon>
+  <a class="navbar-brand headerfont" [routerLink]="['toptracks']"><h1>Musix</h1></a>
+  
+  <!-- <a class="nav-link dropdown-toggle c" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+  aria-haspopup="true" aria-expanded="false">
+  Country
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+  <a class="dropdown-item header_link" [routerLink]="['country']"><b>India</b></a>
+  <a class="dropdown-item" [routerLink]="['countrytwo']" href="#"><b>Australlia</b></a>
+  
+</div> -->
+  <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    &#9776;
+  </button>
+
+  <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+    <ul class="navbar-nav" >
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Country
+        <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#" class="dropdown-item header_link" [routerLink]="['country']"><b>India</b></a></li>
+        <li><a href="#" class="dropdown-item" [routerLink]="['countrytwo']" >Australia</a></li>      
+      </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Recommended
+        <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#" class="dropdown-item header_link" [routerLink]="['allrecommended']" (click)="checkAR()"><b>All Recommendation</b></a></li>
+        <li><a href="#" class="dropdown-item" [routerLink]="['recommended']" (click)="checkR()" >My Recommendation</a></li>      
+      </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['favourite']" (click)="isMenuCollapsed = true" (click)="checkF()" >Favourites</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['toptracks']" (click)="isMenuCollapsed = true">Top Tracks</a>
+      </li>
+    </ul>
+    <div class="menu_sec">
+      <a *ngIf="!authService.logged">
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item id="register" [routerLink]="['register']">Sign Up</button>
+        <button mat-menu-item id="login" [routerLink]="['login']">Log In</button>
+      </mat-menu>
+      </a>
+      <a *ngIf="authService.logged" >
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item id="logout" [routerLink]="['Country']" (click)="logout()">Log Out</button>
+        </mat-menu>
+      </a>
+    </div>
+  </div>
+</nav>
+
+

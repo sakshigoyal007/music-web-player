@@ -1,0 +1,19 @@
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px" *ngFor="let artist of artists.items">
+    <mat-card class="example-card " fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+      <mat-card-header>
+        <!-- <mat-card-content class="title">{{artist["name"]}}</mat-card-content>  -->
+        <mat-card-content class="title">{{artist["artists"][0].name}}</mat-card-content>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- <img class="image img-fluid" style="width:20%;height:30%;" src="{{url}}" alt="loading image"> -->
+        <div class="favplay" appRowdir>
+          <div class="btn_one">
+          <!-- <button mat-raised-button  color="primary" (click)="GoToDetails()">details</button> -->
+          </div>
+          </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="space-detail">
+
+  </div>

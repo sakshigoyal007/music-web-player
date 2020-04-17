@@ -1,0 +1,71 @@
+/* Header top css */
+.header_top{
+    margin: 0.02em;
+    padding: 0.2em;
+    
+}
+.mat-toolbar-row h1{
+    font-size: 1.5em;
+    margin-right: 1em;
+    margin-left: 0.1em;
+}
+/* #register{
+    margin-left: 50vw;
+    border: 3px solid coral;
+    border-radius: 10px;
+    padding: 1px;
+} */
+    .mat-toolbar{
+    background-color: black;
+    border-bottom: 1px solid orange;
+} 
+
+/* .header_link{
+    /* margin: 0.5em;
+    font-size: 0.9em; */
+/* } */ */
+.header_link a{
+    text-decoration: none;
+    color:white !important;
+}
+
+
+.header_link a:hover{
+    border-bottom: 3px solid  coral;
+    color:coral; 
+}
+.menu_sec{
+    margin-left: auto;
+    
+}
+
+.c{
+    text-decoration: none;
+    color:white !important;
+}
+
+.ic{
+      padding-left: 20px;
+      padding-right: 30px;
+      outline: 0 !important;
+}
+.navbar{
+    background-color: black;
+    border-bottom: 2px solid orange;
+    color: white;
+}
+.navbar a{
+    font-size: 1.2em;
+    color:orange;
+
+}
+.headerfont{
+    font-size:1.8em;
+}
+.iconrot{
+    font-size: 1.5em;;
+}
+.navbar-toggler{
+    color: orange;
+
+}

@@ -1,0 +1,11 @@
+<app-search ></app-search>
+<div class="country_list">
+    <app-music-card [artist]="artist" *ngFor="let artist of musics.albums.items | paginate:config"></app-music-card>
+    </div>
+    <div class="pagination-css" id="pagination-id">
+        <pagination-controls
+        responsive="true"
+        class="pagination"
+        (pageChange)="this.config.currentPage = $event"
+      ></pagination-controls>
+      </div>
