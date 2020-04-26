@@ -1,0 +1,66 @@
+version : '3.0'
+services :
+    user:
+        image : user
+        network_mode: host
+        build : ./user
+        ports:
+            - "8080:8080"
+        # expose:
+        #     - "8080"
+        depends_on:
+            - mysql
+
+    favourite:
+        image : favourite
+        network_mode: host
+        build : ./Favourite
+        ports:
+            - "9997:9997"
+                # expose:
+                #     - "8089"
+        depends_on:
+            - mongo
+    recommendation:
+        image : recommendation
+        network_mode: host
+        build : ./Recommendation
+        ports:
+            - "9998:9998"
+                        # expose:
+                        #     - "8089"
+        depends_on:
+            - mongo
+    mysql:
+        image: mysql:5.5
+        network_mode: host
+        restart: always
+        container_name: mysql-container
+        expose:
+            - 3306
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: musix
+            MYSQL_ROOT_PASSWORD: Hello@12
+             # MYSQL_USERNAME: root
+             # MYSQL_PASSWORD: Root@123
+    mongo:
+        image: mongo:3.4-jessie
+        network_mode: host
+        container_name: mongo-container
+        ports:
+            - "27017:27017"
+
+
+# container for user id
+    musix:
+        image: musix
+        build: ./musix
+        network_mode: host
+        container_name: angular-container
+        ports:
+            - "4200:4200"
+        expose: [4200]
+        healthcheck:
+           test: "exit 0"

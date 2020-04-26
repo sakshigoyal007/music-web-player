@@ -1,0 +1,28 @@
+version : '3.0'
+services :
+    user:
+        image : user
+        network_mode: host
+        build : /
+        ports:
+            - "8080:8080"
+        # expose:
+        #     - "8080"
+        depends_on:
+            - mysql
+
+    mysql:
+         image: mysql:5.5
+         network_mode: host
+         restart: always
+         container_name: mysql-container
+         expose:
+             - 3306
+         ports:
+             - "3306:3306"
+         environment:
+             MYSQL_DATABASE: musix
+             MYSQL_ROOT_PASSWORD: Hello@12
+             
+             # MYSQL_USERNAME: root
+             # MYSQL_PASSWORD: Root@123
